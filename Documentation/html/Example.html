@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Use &#8212; SFA_f2py  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="How to Use" href="HowToUse.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="example-of-use">
+<h1>Example of Use<a class="headerlink" href="#example-of-use" title="Permalink to this headline">¶</a></h1>
+<p>Let’s give a simple example how to use the script.</p>
+<div class="section" id="input-and-computation">
+<h2>Input and Computation<a class="headerlink" href="#input-and-computation" title="Permalink to this headline">¶</a></h2>
+<p>After running the script we see the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Type</span> <span class="n">number</span> <span class="n">of</span> <span class="n">points</span> <span class="k">for</span> <span class="n">dipole</span> <span class="n">evaluation</span><span class="p">:</span>
+<span class="o">&gt;&gt;</span> <span class="mi">1000</span>
+
+<span class="n">Type</span> <span class="n">number</span> <span class="n">of</span> <span class="n">points</span> <span class="k">for</span> <span class="n">integrals</span> <span class="n">evaluation</span><span class="p">:</span>
+<span class="o">&gt;&gt;</span> <span class="mi">1000</span>
+
+<span class="n">Type</span> <span class="n">sense</span> <span class="n">of</span> <span class="n">polarisation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="n">anticlockwise</span><span class="p">,</span> <span class="mi">1</span> <span class="n">clockwise</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">Type</span> <span class="n">sense</span> <span class="n">of</span> <span class="n">polarisation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">second</span> <span class="n">field</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="n">anticlockwise</span><span class="p">,</span> <span class="mi">1</span> <span class="n">clockwise</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="mi">1</span>
+
+<span class="n">Type</span> <span class="n">ellipticity</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span> <span class="n">between</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="mf">1.0</span> <span class="p">(</span><span class="mf">0.0</span> <span class="k">for</span> <span class="n">linear</span> <span class="n">polarisation</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="mi">0</span>
+
+<span class="n">Type</span> <span class="n">carrier</span> <span class="n">envelope</span> <span class="n">phase</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span><span class="p">:</span> <span class="mf">0.0</span> <span class="n">to</span> <span class="mf">1.0</span><span class="p">:</span>
+<span class="o">&gt;&gt;</span> <span class="mi">0</span>
+
+<span class="n">Type</span> <span class="n">carrier</span> <span class="n">envelope</span> <span class="n">phase</span> <span class="n">of</span> <span class="n">the</span> <span class="n">second</span> <span class="n">field</span><span class="p">:</span> <span class="mf">0.0</span> <span class="n">to</span> <span class="mf">1.0</span><span class="p">:</span>
+<span class="o">&gt;&gt;</span> <span class="mi">0</span>
+
+<span class="n">Type</span> <span class="n">number</span> <span class="n">of</span> <span class="n">cycles</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">envelope</span> <span class="k">for</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span> <span class="p">(</span><span class="n">must</span> <span class="n">be</span> <span class="n">greater</span> <span class="n">than</span> <span class="mi">0</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="mi">10</span>
+
+<span class="n">Type</span> <span class="n">second</span> <span class="n">field</span> <span class="n">frequency</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span> <span class="n">first</span> <span class="n">field</span> <span class="k">for</span> <span class="n">multicolored</span> <span class="n">fields</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="mi">1</span>
+
+<span class="n">Type</span> <span class="n">relative</span> <span class="n">delays</span> <span class="n">between</span> <span class="n">fields</span> <span class="p">(</span><span class="n">between</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="mf">1.0</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="mf">0.5</span>
+
+<span class="n">Type</span> <span class="n">deviation</span> <span class="n">between</span> <span class="n">pulses</span> <span class="p">(</span><span class="mf">0.0</span> <span class="n">to</span> <span class="mf">1.0</span><span class="p">):</span>
+<span class="o">&gt;&gt;</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>At this moment, the parameters have been accepted and the script proceeds to the most computational heavy part of the script by calling a function:</p>
+<dl class="py function">
+<dt id="main.sfa">
+<code class="sig-prename descclassname">main.</code><code class="sig-name descname">sfa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameters</span></em>, <em class="sig-param"><span class="n">result</span></em>, <em class="sig-param"><span class="n">N_points</span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.sfa" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>The function returns a numpy.array of computed values. The result is saved to the file ‘result.h5’.</p>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>The result is processed using Fast Fourier Transform:</p>
+<dl class="py function">
+<dt id="scipy.fftpack.fft">
+<code class="sig-prename descclassname">scipy.fftpack.</code><code class="sig-name descname">fft</code><span class="sig-paren">(</span><em class="sig-param">result[i,:]</em><span class="sig-paren">)</span><a class="headerlink" href="#scipy.fftpack.fft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>The output of this function is plotted using matplotlib library.</p>
+<p>The resulting plots should look similiar to these:</p>
+<a class="reference internal image-reference" href="_images/omega.png"><img alt="_images/omega.png" src="_images/omega.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/E_fields.png"><img alt="_images/E_fields.png" src="_images/E_fields.png" style="width: 400px;" /></a>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">SFA_f2py</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HowToUse.html">How to Use</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example of Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-and-computation">Input and Computation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="HowToUse.html" title="previous chapter">How to Use</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Tadeáš Němec.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Example.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
