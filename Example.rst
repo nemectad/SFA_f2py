@@ -60,8 +60,8 @@ The output of this function is plotted using matplotlib library.
 
 The resulting plots should look similiar to these:
 
-.. image :: _build/html/images/omega.png
+.. image :: images/omega.png
     :width: 400
 
-.. image :: _build/html/images/E_fields.png
+.. image :: images/E_fields.png
     :width: 400
