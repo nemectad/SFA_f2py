@@ -195,11 +195,29 @@ def plotResult(result):
     fig, ax = plt.subplots()
     ax.plot(tf, 2.0/N * np.abs(yf1[0:N//2]), label=r"$E_{dip1}$")
     ax.plot(tf, 2.0/N * np.abs(yf2[0:N//2]), label=r"$E_{dip2}$")
+
+    # Setting ticks for dipole radiation
+    omega_0 = 5.68000E-2/(2*np.pi)
+    omegas = np.linspace(0, tf[-1], int(round(tf[-1]/omega_0)))
+    ax.set_xticks(omegas)
+    #ax.set_xticklabels([r"{}$\omega$".format(x) for x in range(0, omegas.shape[0])], fontsize=9)
+    ax.set_xticklabels([x for x in range(0, omegas.shape[0])], fontsize=9)
+    plt.setp(ax.get_xticklabels()[0], visible=False)
+    # shows odd harmonics:
+    for i, oddOmeg in enumerate(omegas):
+        if (i % 2) != 0:
+            plt.axvline(x=oddOmeg, color='r', linestyle=':', linewidth=0.5)
+
+
+    # Setting legend and size
     ax.legend(loc=1)
     ax.set_xlim(0, 0.5)
     ax.set_ylim(bottom = 10e-7)
+    ax.set_ylabel(r"$E$", fontsize=14)
+    ax.set_xlabel(r"$\omega_0$", fontsize=14)
     ax.set_title("Dipole radiation spectrum")
     plt.yscale('log')
+    fig.set_size_inches(18.5, 5)
     plt.show()
 
     # Time domain for fields
