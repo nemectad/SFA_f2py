@@ -11,15 +11,13 @@
 # ed and plotted in Python using matplotlib library       #
 ###########################################################
 
-
 import library
 
 
-
-parameters = library.userInput()
+parameters = library.user_input()
 
 result = library.compute(parameters)
 
-library.saveToH5File(result)
+library.save_to_H5file(result)
 
-library.plotResult(result)
+library.plot_result(result)
