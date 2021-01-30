@@ -61,7 +61,7 @@ The output of this function is plotted using matplotlib library.
 The resulting plots should look similiar to these:
 
 .. image :: images/omega.png
-    :width: 400
+    :width: 600
 
 .. image :: images/E_fields.png
     :width: 400
