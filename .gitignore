@@ -1,0 +1,10 @@
+*.h5
+.DS_Store
+*.html
+*.css
+*.js
+*.txt
+*.doctree
+*.pickle
+*.inv
+*.buildinfo
